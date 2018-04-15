@@ -1,0 +1,237 @@
+@echo off 
+color 0b
+title GAME
+goto hi 
+
+:hi
+echo hello i am apurva
+set /p name=What is your name?:
+goto welcome
+
+:welcome
+cls
+echo Hello, %name%.what do you want to do ?please enter s.no!
+echo.
+echo 1.play quiz
+
+echo 2.know time
+
+echo 5.exit
+
+set /p input=Enter:
+if "%input%" == "1" goto Menu
+if "%input%" == "2" goto timer
+if "%input%" == "3" goto locker
+if "%input%" == "4" goto code
+if "%input%" == "5" exit
+
+
+:timer
+color 0A
+cls
+echo today is %date% and time is %time% .%name%.
+pause >nul
+echo. 
+echo 1.wanna recheck 
+echo 2. go to menu
+ 
+set /p input=Enter:
+if "%input%" == "2" goto welcome
+if "%input%" == "1" goto timer
+
+:Menu
+cls
+echo Welcome to the quiz
+pause >nul
+echo.
+echo 
+echo.
+echo 1.Start it up!
+echo 2.Exit :(
+echo.
+set /p input=Enter:
+if "%input%" == "1" goto q1
+if "%input%" == "2" exit
+
+:q1
+cls
+echo Hello, %name%. You are starting the quiz so open windos of your brain and get ready for quiz.
+echo best of luck.
+pause >nul
+cls
+echo The first question!
+pause >nul
+cls
+echo.
+echo your first question is...
+echo.
+echo Which is the largest animal in the world ?
+echo.
+echo 1. Blue whale
+echo 2. elephant
+echo 3. lion
+echo 4. hipo
+echo.
+set /p input=Enter:
+if "%input%" == "1" goto a1
+if "%input%" == "2" goto f1
+if "%input%" == "3" goto f1
+if "%input%" == "4" goto f1
+
+:a1
+cls
+echo good job!but it was esezest one !
+pause >nul
+goto q2
+
+:f1
+cls
+echo YOU JUST LOST THE GAME!
+pause >nul
+goto q1
+
+:q2
+cls
+echo.
+echo now some tough quition.
+echo.
+echo  Which is the most spoken language in the world ?
+echo.
+echo 1. Italian
+echo 2. Spanish
+echo 3. Chinese
+echo 4. English
+echo.
+set /p input=Enter:
+if "%input%" == "1" goto f2
+if "%input%" == "2" goto f2
+if "%input%" == "3" goto a2
+if "%input%" == "4" goto f2
+
+:a2
+cls
+echo apurva: there is some thing spetial in you.it was a touht one
+pause >nul
+goto q3
+
+:f2
+cls
+echo i said it is a tought one but no problem
+pause >nul
+goto q2
+
+:q3
+cls
+echo Which is the largest bone in human body ?
+echo.
+echo 1.humerus
+echo 2.femur
+echo 3.malleus
+echo 4.skull
+echo.
+set /p input=Enter:
+if "%input%" == "1" goto f3
+if "%input%" == "2" goto a3
+if "%input%" == "3" goto f3
+if "%input%" == "4" goto f3
+
+:a3
+cls
+echo apurva: i think you are are very smart.i like it
+pause >nul
+goto q4
+
+:f3
+cls
+echo apurva: n.p it is very hard to answer.try again
+pause >nul
+goto q3
+
+:q4
+cls
+echo Which is the largest country (area) in the world ?
+echo.
+echo 1.Australia	
+echo 2.Inida
+echo 3.Canada
+echo 4.Russia
+echo.
+set /p input=Enter:
+if "%input%" == "1" goto f4
+if "%input%" == "2" goto f4
+if "%input%" == "3" goto f4
+if "%input%" == "4" goto a4
+
+:a4
+cls
+echo apurva: good job %name% .now we are reaching to the final quisten
+goto q5
+
+:f4
+cls
+echo apurva: try again and if you are right you will reach  to the last qustion
+goto q4
+
+:q5
+cls
+echo What kind of small objects composes much of the universe
+echo.
+echo 1.Atoms
+echo 2.Dark matter
+echo 3.Anti-matter
+echo 4.MY DREAMS	
+echo.
+set /p input=Enter:
+if "%input%" == "1" goto a5
+if "%input%" == "2" goto f5
+if "%input%" == "3" goto f5
+if "%input%" == "4" goto f5
+
+:a5
+cls 
+echo apurva: O.M.G! you compleated the game.
+goto end
+
+:f5
+cls
+echo apurva: thats silly answer.try again
+goto q5
+
+:end
+color 0a
+mode 1000
+echo you won!!!!!  
+echo
+echo                 `.-://:.`                                                `.-://:--`                
+echo                      `:hhhs/`                 .``:.-                  `/yhddo-`                    
+echo                        oyhhdho-               .+.++.                :sdmmdds                       
+echo                       /ysssydddh/`           `:sddd+.            .+dmddhysyh/                      
+echo                      ``     .shdddyo-`        .sNNNo`        `:ohmdmms.     .`                     
+echo                              .hhhhhddo`        +mNm+        .oddhhhdm`                             
+echo                              /hysssyhmd/`      +hmd/.     .odmdhysshd/                             
+echo                              ``    `-+dms`     +ysh/     `smmh/.    `.                             
+echo                                       `ohho-   oy+y+  `:shdh+`                                     
+echo                                        :hdmNmyohy+yhoymNmmd/                                       
+echo                                        ohhhhhmNhy+ydNmddddds                                       
+echo                                       `:--/symmds+shmmhs/--/                                       
+echo                                            .smmmsoymmms                                            
+echo                                            -smmdhyhddmo:                                           
+echo                                            `-odhhyhhm+-                                            
+echo                                             `ddmyshmdy                                             
+echo                                             /dNhhyhdNd-                                            
+echo                                             :Nm:hsh/NN:                                            
+echo                                              /msssyhm/                                             
+echo                                               ys/syhs                                              
+echo                                               mN/yhNd                                              
+echo                                              -dm+ohmh`    g                                         
+echo                                               `.`:ys.   .`                                         
+echo                                                h`sy---+:`,                                         
+echo                                                  .hdyy/.                                          
+echo
+pause >nul 
+goto exit
+
+
+:exit 
+exit
+
